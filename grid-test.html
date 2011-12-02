@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>  
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,user-scalable=no initial-scale=1.0,minimum-scale=1, maximum-scale=1" />     
+		<title>Grid test</title>
+		<link rel="stylesheet" href="css/screen.css" media="screen" />  
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]--> 
+		<script src="http://www.google.com/jsapi"></script>
+		<script>
+			google.load("jquery", "1.6.2");
+			google.load("jqueryui", "1.8.16");
+		</script> 
+		<script type="text/javascript" charset="utf-8">
+			jQuery(function( $ ){ 
+					var c_canvas = document.getElementById("c");
+					var context = c_canvas.getContext("2d");
+					for (var y = 0.5; y < 375; y += 10) {
+					  context.moveTo(0, y);
+					  context.lineTo(500, y);
+					}  
+					context.strokeStyle = "#eee";
+					context.stroke();
+			});
+		</script>
+	</head>
+	<body>
+		<canvas id="c" width="500" height="375"></canvas>
+	</body>
+</html>

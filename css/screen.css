@@ -1,0 +1,77 @@
+                                                                                                                                                                                                                           /*================
+Grid system (to be combined with regular base styles)
+Version 1.0
+Author: Jack Armley jack.armley@yahoo.co.uk
+Created: 06.22.2011
+Last revised: 08.04.2011
+Contents:
+--
+==================*/
+
+/*========
+[=3:Modular components]
+======== */	
+	/*--
+		[=3a:Grid system]     
+		To use this system, stack classes like this:
+		<element class="unit float last [width]">
+	 --*/ 
+		/*set base properties*/
+			.unit{min-height:1px;margin-right:15px;position:relative;display:block;}
+			.float,.float-right{float:left;display:inline;clear:none;}
+			.float-right{float:right;}
+			.last{margin-right:0;}
+		/*set special element behaviours*/
+			.unit img{max-width:100%;}
+		/*set widths*/
+			.one{width:45px;}.two{width:105px;}.three{width:165px;}.four{width:225px;}.five{width:285px;}.six{width:345px;}.seven{width:405px;}.eight{width:465px;}.nine{width:525px;}.ten{width:585px;}.eleven{width:645px;}.twelve{width:705px;}.thirteen{width:765px;}.fourteen{width:825px;}.fifteen{width:885px;}.sixteen{width:945px;margin-right:0;}
+		/*style applet*/
+			#grid-toggle{text-indent:-9000px;display:block;margin:0 0 0 -57px;position:fixed;left:50%;top:0;z-index:1000;width:114px;height:38px;background:transparent url('../site_assets/grid/grid-icon_togglegrid.png') no-repeat top left;}
+				#grid-toggle:hover{cursor:pointer;}   
+		/*style applet*/
+			#grid-annotations{z-index:101;height:23px;width:100%;position:absolute;top:0;left:0;background:transparent url('../site_assets/grid/grid-guide_fsAnnotation.png') no-repeat top center;}	
+			#grid-overlay{z-index:100;width:100%;position:absolute;top:0;left:0;background:transparent url('../site_assets/grid/grid-guide_fsGrid.png') repeat-y top center;opacity: 0.5;-moz-opacity: 0.5;filter:alpha(opacity=50);}
+			#grid-overlay_horz{z-index:100;position:absolute;top:0;left:0;opacity: 0.5;-moz-opacity: 0.5;filter:alpha(opacity=50);}	
+
+/*========
+[=6:Media queries]
+======== */	
+	/*--[=6a:Mobile]--*/
+		@media only screen and (min-width:300px) and (max-width:767px) {
+			/*--Grid system--*/ 
+				/*set widths*/
+					.unit{width:100%;}   
+				/*style applet*/
+					#grid-annotations,#grid-overlay,#grid-overlay_horz{background-image:none;}
+			/*--Global layout styles--*/
+				body{background:#fff;}
+				#wrapper-page{width:100%;padding:0;} 
+				     header[role="banner"]{background:#EBEBEB url('../images/global/html-bg_tiledBg.gif') repeat top left;}
+					#wrapper-content{width:88%;padding:30px 6%;background:transparent;}
+				footer[role="contentinfo"]{width:88%;padding:30px 6%;}
+			/*--Style inner content of main page areas--*/
+				#nav-main{bottom:0;right:6%;text-align:right;}
+					#nav-main li{float:none;background:none;padding:0;}
+						#nav-main a{float:none;}	
+					    
+		}  
+	/*--[=6b:768px screen / iPad portrait]--*/
+		@media only screen and (min-width:768px) and (max-width:991px){ 
+			/*--Grid system--*/ 
+				/*set widths*/
+					.one{width:31px;}.two{width:77px;}.three{width:123px;}.four{width:169px;}.five{width:215px;}.six{width:261px;}.seven{width:307px;}.eight{width:353px;}.nine{width:399px;}.ten{width:445px;}.eleven{width:491px;}.twelve{width:537px;}.thirteen{width:583px;}.fourteen{width:629px;}.fifteen{width:675px;}.sixteen{width:721px;margin-right:0;}
+			 	/*style applet*/
+					#grid-annotations{background-image:url('../site_assets/grid/grid-guide_768Annotation.png');}	
+					#grid-overlay{background-image:url('../site_assets/grid/grid-guide_768grid.png');}	  
+			/*--Global layout styles--*/
+				body{background:#fff;}
+				#wrapper-page{width:721px;padding:0;} 
+					#wrapper-content{width:100%;padding-left:0;padding-right:0;background:transparent;}   
+				footer[role="contentinfo"]{width:721px;padding-left:0;padding-right:0;}
+		}  
+
+		
+
+
+	
+
